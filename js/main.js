@@ -92,31 +92,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Form Submission
+    // Form Submission (WhatsApp Redirect)
     const weddingForm = document.getElementById('wedding-form');
     if (weddingForm) {
         weddingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = weddingForm.querySelector('button');
-            const originalText = btn.innerText;
 
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
 
-            // Simulate form submission
-            setTimeout(() => {
-                btn.innerText = 'Sent Successfully';
-                btn.style.backgroundColor = '#2ecc71';
-                btn.style.borderColor = '#2ecc71';
-                weddingForm.reset();
+            // Format the message for WhatsApp
+            const whatsappMessage = `*New Wedding Inquiry*\n\n` +
+                `*Name:* ${name}\n` +
+                `*Email:* ${email}\n` +
+                `*Phone:* ${phone}\n` +
+                `*Event Date:* ${date}\n` +
+                `*Message:* ${message}`;
 
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                    btn.style.backgroundColor = '';
-                    btn.style.borderColor = '';
-                }, 3000);
-            }, 1500);
+            // Your WhatsApp number (international format without +)
+            const phoneNumber = '919876543210';
+
+            // Create the WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Open in a new tab
+            window.open(whatsappURL, '_blank');
         });
     }
     // Testimonial Carousel
