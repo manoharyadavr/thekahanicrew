@@ -19,7 +19,9 @@
     <header id="header">
         <nav class="container">
             <div class="logo">
-                <a href="#">THE KAHANI CREW</a>
+                <a href="#">
+                    <img src="assets/logo2.png" alt="The Kahani Crew Logo" height="50">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -40,7 +42,7 @@
             <div class="hero-bg">
                 <div class="overlay"></div>
                 <!-- Cinematic image -->
-                <div class="hero-media" style="background-image: url('assets/hero.png');"></div>
+                <div class="hero-media" style="background-image: url('assets/hero1.jpeg');"></div>
             </div>
             <div class="hero-content container">
                 <h1 class="fade-in">The Kahani Crew</h1>
@@ -67,7 +69,7 @@
                 </div>
                 <div class="about-image scroll-reveal">
                     <div class="image-wrapper">
-                        <img src="assets/about.png" alt="Intimate wedding detail" class="reveal-zoom">
+                        <img src="assets/about.jpeg" alt="Intimate wedding detail" class="reveal-zoom" height="400">
                     </div>
                 </div>
             </div>
@@ -156,32 +158,46 @@
                     <h2>Our Kahani Gallery</h2>
                 </div>
                 <div class="portfolio-grid mt-50">
-                    <div class="portfolio-item scroll-reveal tall">
-                        <div class="portfolio-img" style="background-image: url('assets/port1.png');"></div>
+                    <div class="portfolio-item scroll-reveal tall" data-id="orchard">
+                        <div class="portfolio-img" style="background-image: url('assets/charminar1.jpeg');"></div>
+                        <div class="portfolio-info">
+                            <span>Outdoor Clicks</span>
+                            <h4>Opulent Evenings</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item scroll-reveal" data-id="sunset">
+                        <div class="portfolio-img" style="background-image: url('assets/couple2.jpeg');"></div>
+                        <div class="portfolio-info">
+                            <span>Grand Celebration </span>
+                            <h4>Golden Hour Tales</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item scroll-reveal tall" data-id="grand">
+                        <div class="portfolio-img" style="background-image: url('assets/set1.jpeg');"></div>
                         <div class="portfolio-info">
                             <span>Intimate Wedding</span>
-                            <h4>The Orchard Vows</h4>
+                            <h4>The Heritage Vows</h4>
                         </div>
                     </div>
-                    <div class="portfolio-item scroll-reveal">
-                        <div class="portfolio-img" style="background-image: url('assets/port2.png');"></div>
-                        <div class="portfolio-info">
-                            <span>Farmhouse Wedding</span>
-                            <h4>Sunset Serenity</h4>
-                        </div>
-                    </div>
-                    <div class="portfolio-item scroll-reveal">
-                        <div class="portfolio-img" style="background-image: url('assets/port3.png');"></div>
-                        <div class="portfolio-info">
-                            <span>Decor Details</span>
-                            <h4>Modern Minimalism</h4>
-                        </div>
-                    </div>
-                    <div class="portfolio-item scroll-reveal tall">
-                        <div class="portfolio-img" style="background-image: url('assets/port4.png');"></div>
+                    <div class="portfolio-item scroll-reveal tall" data-id="emotions">
+                        <div class="portfolio-img" style="background-image: url('assets/couple44.jpeg');"></div>
                         <div class="portfolio-info">
                             <span>Candid moments</span>
                             <h4>Pure Emotions</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item scroll-reveal" data-id="decor">
+                        <div class="portfolio-img" style="background-image: url('assets/out2.jpeg');"></div>
+                        <div class="portfolio-info">
+                            <span>Decor Details</span>
+                            <h4>Elegant Ambience</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item scroll-reveal" data-id="traditions">
+                        <div class="portfolio-img" style="background-image: url('assets/couple31.jpeg');"></div>
+                        <div class="portfolio-info">
+                            <span>Culture & Rituals</span>
+                            <h4>Timeless Traditions</h4>
                         </div>
                     </div>
                 </div>
@@ -190,18 +206,45 @@
 
         <!-- Venue Partnerships -->
         <section id="venues" class="section">
-            <div class="container text-center">
-                <span class="section-subtitle">Exclusivity</span>
-                <h2>Our Venue Partners</h2>
-                <div class="venue-content mt-50">
-                    <p class="premium-text">We maintain exclusive partnerships with Hyderabad's most sought-after
-                        farmhouses, resorts, and private retreats. This allows us to offer you unique locations and
-                        seamless management that others simply cannot.</p>
-                    <div class="venue-logos mt-50">
-                        <div class="venue-logo">The Orchard Estate</div>
-                        <div class="venue-logo">Sage River Resort</div>
-                        <div class="venue-logo">Olive Grove Retreat</div>
-                        <div class="venue-logo">The Kahani Farm</div>
+            <div class="container">
+                <div class="venue-center-text text-center">
+                    <span class="section-subtitle">Exclusivity</span>
+                    <h2>Our Venue Partners</h2>
+                    <div class="venue-content mt-30">
+                        <p class="premium-text" style="max-width: 800px; margin: 0 auto;">We maintain exclusive
+                            partnerships with Hyderabad's most
+                            sought-after
+                            farmhouses, resorts, and private retreats. This allows us to offer you unique locations
+                            and
+                            seamless management that others simply cannot.</p>
+                    </div>
+                </div>
+
+                <div class="venue-marquee mt-50">
+                    <div class="venue-track">
+                        <!-- Set 1 -->
+                        <div class="venue-card">Ayana Resorts <span class="venue-location">Aziznagar</span></div>
+                        <div class="venue-card">Woodland Resorts <span class="venue-location">Moinabad</span></div>
+                        <div class="venue-card">Alekhya Resorts <span class="venue-location">Yenikepally</span></div>
+                        <div class="venue-card">Krishna's Serene <span class="venue-location">Adraspalle</span></div>
+                        <div class="venue-card">Ananya Eco Resorts <span class="venue-location">Telangana</span></div>
+                        <div class="venue-card">Kulkarni Resorts <span class="venue-location">Shamshabad</span></div>
+                        <div class="venue-card">LVN Green Acres <span class="venue-location">Shamshabad</span></div>
+                        <div class="venue-card">Village Trails Resort <span class="venue-location">Ghatkesar</span>
+                        </div>
+                        <div class="venue-card">Bala Vikasa Center <span class="venue-location">Telangana</span></div>
+
+                        <!-- Duplicate Set for Infinite Scroll -->
+                        <div class="venue-card">Ayana Resorts <span class="venue-location">Aziznagar</span></div>
+                        <div class="venue-card">Woodland Resorts <span class="venue-location">Moinabad</span></div>
+                        <div class="venue-card">Alekhya Resorts <span class="venue-location">Yenikepally</span></div>
+                        <div class="venue-card">Krishna's Serene <span class="venue-location">Adraspalle</span></div>
+                        <div class="venue-card">Ananya Eco Resorts <span class="venue-location">Telangana</span></div>
+                        <div class="venue-card">Kulkarni Resorts <span class="venue-location">Shamshabad</span></div>
+                        <div class="venue-card">LVN Green Acres <span class="venue-location">Shamshabad</span></div>
+                        <div class="venue-card">Village Trails Resort <span class="venue-location">Ghatkesar</span>
+                        </div>
+                        <div class="venue-card">Bala Vikasa Center <span class="venue-location">Telangana</span></div>
                     </div>
                 </div>
             </div>
@@ -213,7 +256,7 @@
                 <div class="grid-2 why-grid">
                     <div class="why-visual scroll-reveal">
                         <div class="overlay-visual-container">
-                            <img src="assets/port1.png" alt="Intimate wedding moments" class="overlay-img">
+                            <img src="assets/whyus.jpg" alt="Intimate wedding moments" class="overlay-img">
                             <div class="thread-overlay">
                                 <svg class="kahani-thread" viewBox="0 0 100 800" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -441,20 +484,21 @@
                 </div>
                 <div class="insta-grid mt-50">
                     <div class="insta-item scroll-reveal">
-                        <img src="assets/port1.png" alt="Kahani Moments" class="insta-img">
+                        <img src="assets/insta11.jpeg" alt="Kahani Moments" class="insta-img">
                     </div>
                     <div class="insta-item scroll-reveal">
-                        <img src="assets/port2.png" alt="Kahani Moments" class="insta-img">
+                        <img src="assets/insta2.jpeg" alt="Kahani Moments" class="insta-img">
                     </div>
                     <div class="insta-item scroll-reveal">
-                        <img src="assets/port3.png" alt="Kahani Moments" class="insta-img">
+                        <img src="assets/insta3.jpeg" alt="Kahani Moments" class="insta-img">
                     </div>
                     <div class="insta-item scroll-reveal">
-                        <img src="assets/port4.png" alt="Kahani Moments" class="insta-img">
+                        <img src="assets/insta4.jpeg" alt="Kahani Moments" class="insta-img">
                     </div>
                 </div>
                 <div class="text-center mt-50">
-                    <a href="#" class="btn btn-secondary">Follow Us on Instagram</a>
+                    <a href="https://www.instagram.com/thekahanicrew/" target="_blank" class="btn btn-secondary">Follow
+                        Us on Instagram</a>
                 </div>
             </div>
         </section>
@@ -462,7 +506,7 @@
 
     <footer class="footer section-padding-small">
         <div class="container footer-top">
-            <div class="footer-divider">
+            <!-- <div class="footer-divider">
                 <svg class="kahani-thread-horizontal" viewBox="0 0 800 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 10C100 10 150 2 200 2C250 2 300 18 400 18C500 18 550 2 600 2C650 2 700 10 800 10"
@@ -471,11 +515,13 @@
                     <circle cx="400" cy="18" r="1.5" fill="currentColor" />
                     <circle cx="600" cy="2" r="1.5" fill="currentColor" />
                 </svg>
-            </div>
+            </div> -->
 
             <div class="footer-grid">
                 <div class="footer-col brand-col">
-                    <a href="#" class="footer-logo">THE KAHANI CREW</a>
+                    <a href="#" class="footer-logo">
+                        <img src="assets/logo2.png" alt="">
+                    </a>
                     <p class="brand-desc">Specializing in intimate, farmhouse, and resort weddings in Hyderabad. We
                         craft bespoke experiences that reflect your unique love story.</p>
                 </div>
@@ -494,9 +540,9 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Reach Us</h4>
                     <address class="footer-address">
-                        <p>Jubilee Hills<br>Hyderabad, Telangana</p>
+                        <p>Tarnaka<br>Hyderabad, Telangana</p>
                         <p><a href="mailto:hello@thekahanicrew.com">hello@thekahanicrew.com</a></p>
-                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                        <p><a href="tel:+919059737347">+91 90597 37347</a></p>
                     </address>
                 </div>
 
@@ -504,7 +550,7 @@
                     <h4 class="footer-heading">Social Connect</h4>
                     <ul class="footer-nav">
                         <li>
-                            <a href="#" class="social-link-item">
+                            <a href="https://www.instagram.com/thekahanicrew/" target="_blank" class="social-link-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round">
@@ -516,23 +562,27 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="social-link-item">
+                            <a href="https://wa.me/919059737347" target="_blank" class="social-link-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
                                 </svg>
-                                <span>Facebook</span>
+                                <span>WhatsApp</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="social-link-item">
+                            <a href="https://maps.app.goo.gl/tTjZD6TvKcstiaZe6" target="_blank"
+                                class="social-link-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M12 0C5.372 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.091.375-.293 1.199-.334 1.363-.053.215-.174.261-.401.156-1.493-.695-2.427-2.873-2.427-4.621 0-3.763 2.735-7.218 7.884-7.218 4.139 0 7.355 2.949 7.355 6.892 0 4.112-2.593 7.422-6.191 7.422-1.209 0-2.345-.628-2.735-1.369l-.746 2.843c-.27 1.031-1.001 2.324-1.49 3.122C10.021 23.868 11.002 24 12 24c6.628 0 12-5.372 12-12S18.628 0 12 0z" />
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                <span>Pinterest</span>
+                                <span>Location</span>
                             </a>
                         </li>
                     </ul>
@@ -549,6 +599,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <h3 id="modal-title">Project Title</h3>
+            <div class="modal-grid" id="modal-grid">
+                <!-- Javascript will populate related images here -->
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

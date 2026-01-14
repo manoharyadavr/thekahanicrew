@@ -178,4 +178,132 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSlider();
         }
     }
+    // Gallery Modal Logic
+    const galleryModal = document.getElementById('gallery-modal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalGrid = document.getElementById('modal-grid');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    // Project Data (Simulated Related Images)
+    const projectData = {
+        'orchard': {
+            title: 'Opulent Evenings',
+            images: [
+                'assets/charminar1.jpeg',
+                'assets/charminar2.jpeg',
+                'assets/charminar3.jpeg',
+                'assets/charminar4.jpeg'
+            ]
+        },
+        'sunset': {
+            title: 'Golden Hour Tales',
+            images: [
+                'assets/couple2.jpeg',
+                'assets/couple21.jpeg',
+                'assets/couple22.jpeg',
+                'assets/couple23.jpeg'
+            ]
+        },
+        'decor': {
+            title: 'Elegant Ambience',
+            images: [
+                'assets/out1.jpeg',
+                'assets/out4.jpeg',
+                'assets/out7.jpeg',
+                'assets/out9.jpeg',
+                'assets/out2.jpeg',
+                'assets/out5.jpeg',
+            ]
+        },
+        'emotions': {
+            title: 'Pure Emotions',
+            images: [
+                'assets/couple41.jpeg',
+                'assets/couple42.jpeg',
+                'assets/couple43.jpeg',
+                'assets/couple44.jpeg',
+            ]
+        },
+        'traditions': {
+            title: 'Timeless Traditions',
+            images: [
+                'assets/couple31.jpeg',
+                'assets/couple32.jpeg',
+                'assets/couple33.jpeg',
+                'assets/couple34.jpeg'
+            ]
+        },
+        'grand': {
+            title: 'The Heritage Vows',
+            images: [
+                'assets/set1.jpeg',
+                'assets/out6.jpeg',
+                'assets/out10.jpeg',
+                'assets/out11.jpeg',
+                'assets/out3.jpeg',
+                'assets/out8.jpeg'
+            ]
+        }
+    };
+
+    if (galleryModal && portfolioItems.length > 0) {
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const projectId = item.getAttribute('data-id');
+                const data = projectData[projectId];
+
+                if (data) {
+                    modalTitle.textContent = data.title;
+                    modalGrid.innerHTML = ''; // Clear previous images
+
+                    data.images.forEach((imgSrc, index) => {
+                        const imgWrapper = document.createElement('div');
+                        imgWrapper.classList.add('modal-img-wrapper');
+                        imgWrapper.style.animationDelay = `${index * 0.1}s`;
+
+                        const img = document.createElement('img');
+                        img.src = imgSrc;
+                        img.alt = `${data.title} Image ${index + 1}`;
+                        img.classList.add('modal-img');
+
+                        imgWrapper.appendChild(img);
+                        modalGrid.appendChild(imgWrapper);
+                    });
+
+                    galleryModal.style.display = 'block';
+                    // Trigger reflow
+                    void galleryModal.offsetWidth;
+                    galleryModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            });
+        });
+
+        const closeModal = () => {
+            galleryModal.classList.remove('active');
+            setTimeout(() => {
+                galleryModal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }, 300);
+        };
+
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        // Close on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });
