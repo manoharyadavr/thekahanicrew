@@ -174,7 +174,7 @@
             </div>
             <div class="hero-content container">
                 <h1 class="fade-in">The Kahani Crew</h1>
-                <p class="tagline fade-in">Creating Beautiful, Intimate Weddings with a Touch of Simplicity and Elegance
+                <p class="tagline fade-in">Where every detail tells your story.
                 </p>
                 <div class="hero-ctas fade-in">
                     <a href="#portfolio" class="btn btn-primary">View Our Work</a>
@@ -720,7 +720,8 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <p class="copyright">&copy; 2026 The Kahani Crew. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="currentYear"></span> The Kahani Crew. All rights reserved.</p>
+                <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
                 <div class="footer-credit">
                     <p>Developed by <a href="https://maniora.in" target="_blank">maniora</a></p>
                 </div>
